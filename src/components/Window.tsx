@@ -16,7 +16,7 @@ const Window: React.FC<Props> = ( { title, index, isOpen, onCloseWindow, onMove,
   return (
     <Draggable handle=".window-header"
     onStart={() => onMove(index)}
-    defaultPosition={{x: 100, y: 100}}
+    defaultPosition={{x: 100 + (index * 20), y: 100 + (index * 15)}}
     bounds="parent">
         <div className={`window-container ${isOpen ? `window-open` : `window-closed`}`}
         style={{zIndex: windowZIndex}}>

@@ -114,6 +114,10 @@ body {
 
     background-color: #687273;
 
+    font-family: "Handwritten";
+    font-size: 2rem;
+    font-weight: bold;
+
     // Change the cursor to 'grabbing' using the onGrab or onMouseDown listener
     cursor: grab;
 
@@ -123,6 +127,9 @@ body {
     p{
         margin-right: auto;
         user-select: none;
+        margin-top: 0;
+        margin-bottom: 0;
+        padding: 15px 0 15px 0;
     }
 
     button{
@@ -190,19 +197,76 @@ body {
 #contact-form{
     display: flex;
     flex-direction: row;
+
+    label{
+        font-weight: bold;
+        font-size: 1.4rem;
+        color: $color3;
+    }
+
     #contact-form-info{
         display: flex;
         flex-direction: column;
+        margin-right: auto;
         
         input{
             font-family: "Handwritten";
             font-size: 1.2rem;
+            background-color: transparent;
+            padding: 3px 5px;
+            border: 2px solid $palette-blue-gray;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: $dark-text-color;
+        }
+
+        input:focus{
+            // Maybe make this a gradient?
+            outline: 1px solid $color5;
         }
     }
-    #contact-text{
-        font-family: "Handwritten";
-    }
 
+    #contact-form-message{
+        margin-right: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        #contact-text{
+            font-family: "Handwritten";
+            outline: 1px solid $color5;
+            font-weight: bold;
+            color: $dark-text-color;
+            font-size: 1.2rem;
+            background-color: transparent;
+            padding: 3px;
+            border: 2px solid $palette-blue-gray;
+            resize: none;
+            width: 400px;
+            height: 175px;
+        }
+
+        #contact-submit{
+            position: absolute;
+            transform: translateY(-80px) translateX(130px);
+
+            width: 150px;
+            height: 50px;
+
+            font-size: 1.4rem;
+            font-weight: bold;
+            font-family: "Handwritten";
+
+            box-shadow: 0px 4px $color3;
+        }
+
+        #contact-submit:active{
+            transform: translateY(-76px) translateX(130px);
+            box-shadow: none;
+            background-color: $color1;
+        }
+    }
 }
 
 // #########################

@@ -30,9 +30,10 @@ export const windowData = [
                     <label for="contact-subject">Subject:</label>
                     <input id="contact-subject type="text" required></input>
                 </div>
-                <label for="contact-text">Message:</label>
-                <textarea id="contact-text"></textarea>
-                <button id="contact-submit" class="large-btn">Submit</button>
+                <div id="contact-form-message">
+                    <textarea id="contact-text" placeholder="Tell me what's on your mind" required></textarea>
+                    <button id="contact-submit" class="large-btn">Send!</button>
+                </div>
             </form>
         </div>`
     }
