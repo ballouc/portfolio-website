@@ -112,6 +112,7 @@ body {
 
     padding: 0 15px;
 
+    color: $palette-white;
     background-color: #687273;
 
     font-family: "Handwritten";
@@ -214,7 +215,8 @@ body {
             font-size: 1.2rem;
             background-color: transparent;
             padding: 3px 5px;
-            border: 2px solid $palette-blue-gray;
+            border: 2px solid $palette-gray;
+            // border: 2px solid $palette-blue-gray;
             border-radius: 5px;
             margin-bottom: 10px;
             font-weight: bold;
@@ -223,7 +225,10 @@ body {
 
         input:focus{
             // Maybe make this a gradient?
-            outline: 1px solid $color5;
+            // outline: 1px solid $color5;
+            // border: 2px solid $color5;
+            border: 2px solid $palette-blue-gray;
+            outline: 1px solid $palette-blue-gray;
         }
     }
 
@@ -235,16 +240,24 @@ body {
 
         #contact-text{
             font-family: "Handwritten";
-            outline: 1px solid $color5;
             font-weight: bold;
             color: $dark-text-color;
             font-size: 1.2rem;
             background-color: transparent;
             padding: 3px;
-            border: 2px solid $palette-blue-gray;
+            border: 2px solid $palette-gray;
+            // border: 2px solid $palette-blue-gray;
             resize: none;
             width: 400px;
             height: 175px;
+
+        }
+        
+        #contact-text:focus{
+            border: 2px solid $palette-blue-gray;
+            outline: 1px solid $palette-blue-gray;
+            // outline: 1px solid $color5;
+            // border: 2px solid $color5;
         }
 
         #contact-submit{

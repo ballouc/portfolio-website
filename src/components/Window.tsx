@@ -13,6 +13,15 @@ interface Props{
 
 const Window: React.FC<Props> = ( { title, index, isOpen, onCloseWindow, onMove, windowZIndex, content } ) => {
 
+  // This just stops page refresh on form submission for the contact window.
+  let form = document.getElementById("contact-form");
+  function submitForm(e: Event) {
+      e.preventDefault();
+  }
+  if(form){
+    form.addEventListener('submit', submitForm)
+  }
+
   return (
     <Draggable handle=".window-header"
     onStart={() => onMove(index)}
